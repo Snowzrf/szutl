@@ -1,0 +1,7 @@
+build*
+.ycm_extra_conf.pyc
+
+# Vim swap files
+*.swp
+*.swo
+*~
