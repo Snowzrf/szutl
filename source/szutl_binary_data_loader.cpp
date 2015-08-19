@@ -20,7 +20,7 @@ bool BinaryDataLoader::LoadData(const std::string &img_file_path) {
   // Attempt to open the file
   try {
     // Filesize
-    std::streampos file_size_ = 0;
+    std::streampos file_size = 0;
 
     // File input stream
     std::ifstream ifs;
@@ -36,19 +36,19 @@ bool BinaryDataLoader::LoadData(const std::string &img_file_path) {
     }
 
     // Read beginning of file get pos
-    file_size_ = ifs.tellg();
+    file_size = ifs.tellg();
 
     // Move to end of file
     ifs.seekg(0, std::ios::end);
 
     // Read file size
-    file_size_ = ifs.tellg() - file_size_;
+    file_size = ifs.tellg() - file_size;
 
     std::cout << "Size of file " << img_file_path <<
-      ": " << file_size_ << " bytes.\n";
+      ": " << file_size << " bytes.\n";
 
     // Allocate space in main memory for the data
-    file_size_ = static_cast<std::uint32_t>(file_size_);
+    file_size_ = static_cast<std::uint32_t>(file_size);
     data_ = new char[file_size_];
 
     // Move g ptr back at the beginning
