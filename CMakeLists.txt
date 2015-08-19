@@ -73,7 +73,7 @@ set(SZUTL_SOURCES
 add_library(szutl ${SZUTL_HEADERS} ${SZUTL_SOURCES})
 
 
-# Set the output directories for the user-defined libraries and binaries
+# Set the output directories for the libraries and binaries
 set_target_properties (szutl
   PROPERTIES 
   ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
