@@ -10,7 +10,7 @@ BinaryDataLoader::BinaryDataLoader() :
 
 BinaryDataLoader::~BinaryDataLoader() {
   if(data_ != nullptr) {
-    delete data_;
+    delete[] data_;
 
     data_ = nullptr;
   } 
